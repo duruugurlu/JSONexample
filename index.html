@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Hiiiiii</h1>
+        <div class="yo" id="yo"></div>
+        <div class="nice" id="nice"></div>
+        <select name="hat" id="hat" size='1'>
+            <option value="genre0">R&B</option>
+            <option value="genre1">Pop</option>
+            <option value="genre2">Soul</option>
+            <option value="genre3">Disco</option>
+            <option value="genre4">Funk</option>
+            <option value="genre5">Indie Rock</option>
+            <option value="genre6">Alternative</option>
+            <option value="genre7">Pop Rock</option>
+            <option value="genre8">New Wave</option>
+            <option value="genre9">Rock</option>
+            <option value="genre10">Indie</option>
+            <option value="genre11">Stadium Rock</option>
+        </select>
+        <div class="bud" id="bud"></div>
+        <script type="text/javascript">
+            fetch("songlist.json")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById("yo").innerHTML = JSON.stringify(data);
+                    mes = "<br> <br>";
+                    for (i = 0; i < 10; i++) {
+                        mes += data[i].title + "<br>"
+                        mes += data[i].length == 1 ? "Artist: " : "Artists: ";
+                        mes += data[i].artist.join(", ") + "<br>";
+                        mes += "Genre: " + data[i].genre.join(", ") + "<br>"
+                        mes += "Released " + data[i].year + "<br> <br>"
+                    }
+
+                    mes += "<br>";
+                    document.getElementById("nice").innerHTML = mes;
+
+                    const selEl = document.getElementById("hat");
+
+                    selEl.addEventListener('change', function() {
+                        s = "<br>";
+                        for (i = 0; i < 10; i++) {
+                            if (data[i].genre.indexOf(selEl.options[selEl.selectedIndex].text) != -1) {
+                                s += data[i].title + "<br>"
+                                s += data[i].length == 1 ? "Artist: " : "Artists: ";
+                                s += data[i].artist.join(", ") + "<br>";
+                                s += "Genre: " + data[i].genre.join(", ") + "<br>"
+                                s += "Released " + data[i].year + "<br> <br>"
+                            }
+                        }
+                        document.getElementById("bud").innerHTML = s;
+                    });
+
+
+                })
+
+        </script>
+    </body>
+</html>

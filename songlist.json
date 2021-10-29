@@ -1,0 +1,73 @@
+[
+
+{
+	"artist": ["Doja Cat", "The Weeknd"],
+	"title": "You Right",
+	"year": "2021",
+	"genre": ["R&B","Pop"]
+},
+
+{
+	"artist": ["Bruno Mars", "Anderson .Paak"],
+	"title": "Skate",
+	"year": "2021",
+	"genre": ["R&B", "Soul", "Disco", "Funk"]
+},
+
+{
+	"artist": ["The Neighbourhood"],
+	"title": "Sweater Weather",
+	"year": "2013",
+	"genre": ["Indie Rock","Alternative"]
+},
+
+{
+	"artist": ["The Killers"],
+	"title": "Mr. Brightside",
+	"year": "2013",
+	"genre": ["Pop Rock","Alternative", "New Wave"]
+},
+
+{
+	"artist": ["Coldplay"],
+	"title": "Yellow",
+	"year": "2000",
+	"genre": ["Rock","Alternative"]
+},
+
+{
+	"artist": ["The White Stripes"],
+	"title": "Seven Nation Army",
+	"year": "2003",
+	"genre": ["Rock","Alternative"]
+},
+
+{
+	"artist": ["The Cranberries"],
+	"title": "Zombie",
+	"year": "1994",
+	"genre": ["Rock", "Grunge"]
+},
+
+{
+	"artist": ["Red Hot Chilli Peppers"],
+	"title": "Under the Bridge",
+	"year": "1991",
+	"genre": ["Rock","Alternative"]
+},
+
+{
+	"artist": ["Queen", "David Bowie"],
+	"title": "Under Pressure",
+	"year": "1981",
+	"genre": ["Rock","Pop"]
+},
+
+{
+	"artist": ["fun."],
+	"title": "We Are Young",
+	"year": "2012",
+	"genre": ["Indie","Stadium Rock"]
+}
+
+]
